@@ -1,0 +1,97 @@
+{
+    "info": {
+        "_postman_id": "7fdfe1cd-dbe0-4401-935f-a7ab93af3b9e",
+        "name": "Test",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Sample endpoint",
+            "id": "a2169610-ef15-4cfb-b8da-1bb05c896a6d",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/test/:id",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "test",
+                        ":id"
+                    ],
+                    "variable": [
+                        {
+                            "key": "id"
+                        }
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "id": "35b70373-6519-42b1-b714-fa9609d0957f",
+                    "name": "OK response",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/test/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "test",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{}"
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "basic",
+        "basic": [
+            {
+                "key": "username",
+                "value": "<Basic Auth Username>",
+                "type": "string"
+            },
+            {
+                "key": "password",
+                "value": "<Basic Auth Password>",
+                "type": "string"
+            }
+        ]
+    },
+    "variable": [
+        {
+            "id": "c57abb4e-0b78-4b06-b100-7d90b9f9e90e",
+            "key": "baseUrl",
+            "value": "localhost:3000",
+            "type": "string"
+        }
+    ]
+}

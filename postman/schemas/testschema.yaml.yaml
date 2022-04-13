@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  version: '1.0.0'
+  title: 'Test'
+servers:
+  - url: 'localhost:3000'
+paths:
+  /test/{id}:
+    get:
+      summary: 'Sample endpoint'
+      operationId: sample
+      parameters:
+        - "$ref": "https://raw.githubusercontent.com/PagerDuty/api-schema/main/reference/REST/openapiv3.json#/components/parameters/id"
+      responses:
+        '200':
+          description: 'OK response'
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+security:
+  - BasicAuth: []
